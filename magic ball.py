@@ -17,8 +17,11 @@ while True:
         continue
     if answer in ["да","yes"]:
         print("Вселенная слушает тебя, говори")
-        input()
-        print(random.choice(response_list))
+        if input()!="":
+            print(random.choice(response_list)) 
+        else:
+            print("И тишина была ему ответом...")
+            continue
     else:
         print('Возвращайся если возникнут вопросы!')
         break
